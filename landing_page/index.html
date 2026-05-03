@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakim Downloader</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config for Material Design 3 (Dark Theme) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#9cd67d',
+                        'on-primary': '#0c3900',
+                        'primary-container': '#215106',
+                        'on-primary-container': '#b8f397',
+                        surface: '#121411',
+                        'surface-container-low': '#1a1c18',
+                        'surface-container': '#1e201c',
+                        'surface-container-high': '#282b26',
+                        'on-surface': '#e2e3dd',
+                        'on-surface-variant': '#c3c8bc',
+                        outline: '#8d9287',
+                        'outline-variant': '#43483f',
+                    },
+                    borderRadius: {
+                        'xs': '4px',
+                        'sm': '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '28px',
+                    },
+                    fontFamily: {
+                        sans: ['Rubik', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Top App Bar (MD3) -->
+    <header class="w-full px-4 sm:px-6 h-16 flex items-center justify-between sticky top-0 bg-surface/80 backdrop-blur-md z-50 border-b border-outline-variant">
+        <div class="flex items-center gap-4">
+            <button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+            <span class="text-xl font-medium tracking-tight">HAKIM BOUZOURDAZ</span>
+        </div>
+        <div class="flex items-center gap-3">
+            <span class="text-sm font-medium text-on-surface-variant hidden sm:block">HAKIM DOWNLOADER</span>
+            <div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+                <i data-lucide="download-cloud" class="w-4 h-4"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col gap-24">
+        
+        <!-- Hero Section -->
+        <section class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 mt-8">
+            <!-- Text Content -->
+            <div class="flex-1 flex flex-col gap-6 text-center lg:text-right">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-on-surface">
+                    تنزيل الفيديوهات<br>بأسلوب عصري.
+                </h1>
+                <p class="text-lg text-on-surface-variant max-w-xl mx-auto lg:mx-0">
+                    تطبيق سريع ومجاني لتحميل الفيديوهات من جميع المنصات بأمان وبدون إعلانات. مصمم وفقاً لأحدث معايير Material Design.
+                </p>
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                    <!-- MD3 Filled Button -->
+                    <button class="bg-primary text-on-primary hover:opacity-90 px-6 py-3 rounded-full font-medium flex items-center gap-2 shadow-sm transition-transform active:scale-95">
+                        <i data-lucide="download" class="w-5 h-5"></i>
+                        تحميل (APK)
+                    </button>
+                    <!-- MD3 Outlined Button -->
+                    <a href="https://github.com/hakim" class="border border-outline text-primary hover:bg-surface-container-high px-6 py-3 rounded-full font-medium flex items-center gap-2 transition-colors active:scale-95">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                        الكود المصدري
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mockup Container (MD3 Elevated Card) -->
+            <div class="flex-1 w-full max-w-lg lg:max-w-none">
+                <div class="bg-surface-container-high rounded-xl overflow-hidden shadow-lg border border-outline-variant">
+                    <div class="p-2 bg-surface-container flex items-center gap-2 border-b border-outline-variant">
+                        <div class="w-3 h-3 rounded-full bg-outline-variant"></div>
+                        <div class="w-3 h-3 rounded-full bg-outline-variant"></div>
+                        <div class="w-3 h-3 rounded-full bg-outline-variant"></div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop" alt="App Mockup" class="w-full h-auto object-cover opacity-80 mix-blend-luminosity">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- MD3 Card -->
+            <div class="bg-surface-container rounded-xl p-6 border border-outline-variant hover:bg-surface-container-high transition-colors">
+                <div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center mb-4">
+                    <i data-lucide="zap" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-medium mb-2 text-on-surface">تحميل فوري</h3>
+                <p class="text-on-surface-variant text-sm">أقصى سرعة لتحميل أسرع مع تعدد الخيوط.</p>
+            </div>
+            
+            <div class="bg-surface-container rounded-xl p-6 border border-outline-variant hover:bg-surface-container-high transition-colors">
+                <div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center mb-4">
+                    <i data-lucide="monitor-play" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-medium mb-2 text-on-surface">دقة 4K</h3>
+                <p class="text-on-surface-variant text-sm">خيارات دقة متعددة تصل إلى 4K.</p>
+            </div>
+
+            <div class="bg-surface-container rounded-xl p-6 border border-outline-variant hover:bg-surface-container-high transition-colors">
+                <div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center mb-4">
+                    <i data-lucide="music" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-medium mb-2 text-on-surface">تحويل MP3</h3>
+                <p class="text-on-surface-variant text-sm">استخراج الصوت عالي الدقة بنقرة واحدة.</p>
+            </div>
+
+            <div class="bg-surface-container rounded-xl p-6 border border-outline-variant hover:bg-surface-container-high transition-colors">
+                <div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center mb-4">
+                    <i data-lucide="shield-check" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-medium mb-2 text-on-surface">واجهة نقية</h3>
+                <p class="text-on-surface-variant text-sm">خالي تماماً من الإعلانات والتتبع.</p>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="max-w-3xl mx-auto w-full">
+            <h2 class="text-sm font-medium text-primary tracking-widest uppercase mb-8 flex items-center gap-4">
+                <span class="h-[1px] flex-grow bg-outline-variant"></span>
+                خطوات الاستخدام
+            </h2>
+            
+            <div class="flex flex-col gap-6">
+                <!-- List Item -->
+                <div class="flex items-start gap-6 bg-surface-container-low p-4 rounded-lg">
+                    <div class="w-10 h-10 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-bold text-lg shrink-0">1</div>
+                    <div>
+                        <h3 class="text-lg font-medium text-on-surface mb-1">نسخ الرابط</h3>
+                        <p class="text-on-surface-variant">انسخ رابط الفيديو من أي منصة وسائط تفضلها.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start gap-6 bg-surface-container-low p-4 rounded-lg">
+                    <div class="w-10 h-10 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-bold text-lg shrink-0">2</div>
+                    <div>
+                        <h3 class="text-lg font-medium text-on-surface mb-1">لصق واختيار</h3>
+                        <p class="text-on-surface-variant">ضع الرابط في التطبيق وحدد الجودة المناسبة لك.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start gap-6 bg-surface-container-low p-4 rounded-lg">
+                    <div class="w-10 h-10 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-bold text-lg shrink-0">3</div>
+                    <div>
+                        <h3 class="text-lg font-medium text-on-surface mb-1">بدء التحميل</h3>
+                        <p class="text-on-surface-variant">ضغطة واحدة وسيبدأ التحميل بأقصى سرعة ممكنة.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Box (MD3 Prominent Card) -->
+        <section class="bg-primary-container rounded-xl p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+            <!-- Decorative shape -->
+            <div class="absolute -top-24 -left-24 w-64 h-64 bg-primary rounded-full opacity-10 blur-3xl"></div>
+            
+            <div class="text-center md:text-right relative z-10">
+                <h2 class="text-3xl font-bold text-on-primary-container mb-2">ابدأ التحميل اليوم.</h2>
+                <p class="text-on-primary-container/80 text-lg">حمل نسختك المجانية الآن وتخلص من الإعلانات.</p>
+            </div>
+            
+            <div class="flex flex-wrap items-center justify-center gap-4 relative z-10">
+                <a href="https://github.com/hakim" class="border-2 border-on-primary-container/30 text-on-primary-container hover:bg-on-primary-container/10 px-6 py-3 rounded-full font-medium flex items-center gap-2 transition-colors">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                    GITHUB
+                </a>
+                <button class="bg-primary text-on-primary hover:opacity-90 px-6 py-3 rounded-full font-medium flex items-center gap-2 shadow-sm transition-transform active:scale-95">
+                    <i data-lucide="download" class="w-5 h-5"></i>
+                    ANDROID APK
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-surface-container mt-auto border-t border-outline-variant py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-on-surface-variant text-sm">© 2026 OFFICIAL RELEASE</p>
+            <p class="text-on-surface-variant text-sm font-medium">HAKIM BOUZOURDAZ</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
